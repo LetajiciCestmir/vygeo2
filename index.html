@@ -7,14 +7,27 @@
   <meta charset="utf-8">
 
   <!-- Load Leaflet code library -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" crossorigin="">
   <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" crossorigin=""></script>
 
   <!-- CSS -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Pirata+One&family=Playwrite+NO:wght@100..400&display=swap');
-    body { margin:0; padding:0; font-family: "Comic Neue", cursive; }
-    #map { position: absolute; top:0; bottom:0; right:0; left:0; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Comic Neue", cursive;
+    }
+
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+
     #map-title {
       position: relative;
       margin-top: 10px;
@@ -25,7 +38,6 @@
       padding: 6px 8px;
       font-family: "Comic Neue", cursive;
       font-weight: bold;
-      
       font-size: 24px;
       z-index: 800;
     }
@@ -38,28 +50,27 @@
 
   <script>
 
-  /* Initialize map */
-  var map = L.map('map', {
-    center: [50.0768575, 16.9320419],
-    zoom: 12,
-    scrollWheelZoom: true
-  });
+    /* Initialize map */
+    var map = L.map('map', {
+      center: [50.0768575, 16.9320419],
+      zoom: 12,
+      scrollWheelZoom: true
+    });
 
-  /* Stadia Stamen Terrain basemap (API key required) */
-var OpenStreetMap_DE = L.tileLayer(
-  'https://tile.openstreetmap.de/{z}/{x}/{y}.png',
-  {
-    maxZoom: 18,
-    attribution:
-      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }
-).addTo(map);
+    /* OpenStreetMap DE basemap */
+    var OpenStreetMap_DE = L.tileLayer(
+      'https://tile.openstreetmap.de/{z}/{x}/{y}.png',
+      {
+        maxZoom: 18,
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }
+    ).addTo(map);
 
-
-  /* Marker */
-  L.marker([50.0768575, 16.9320419])
-    .addTo(map)
-    .bindPopup("Insert pop-up text here");
+    /* Marker */
+    L.marker([50.0768575, 16.9320419])
+      .addTo(map)
+      .bindPopup("Insert pop-up text here");
 
   </script>
 </body>
