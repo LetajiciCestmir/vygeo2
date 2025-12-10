@@ -2,13 +2,13 @@
 <html>
 <head>
   <title>Vojtěch HENEMAN</title>
-   <link rel="icon" type="image/png" href="DUCK.png">
+  <link rel="icon" type="image/png" href="DUCK.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
 
   <!-- Load Leaflet code library -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
-  <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" crossorigin=""></script>
 
   <!-- CSS -->
   <style>
@@ -43,18 +43,17 @@
     scrollWheelZoom: true
   });
 
-  /* Inserted Stadia Stamen Watercolor basemap */
-  var Stadia_StamenWatercolor = L.tileLayer(
-    'https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.{ext}',
+  /* Stadia Stamen Terrain basemap (API key required) */
+  var Stadia_StamenTerrain = L.tileLayer(
+    'https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}{r}.png?api_key=YOUR_KEY_HERE',
     {
-      minZoom: 1,
-      maxZoom: 16,
+      minZoom: 0,
+      maxZoom: 18,
       attribution:
         '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> ' +
         '&copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> ' +
         '&copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> ' +
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      ext: 'jpg'
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }
   ).addTo(map);
 
