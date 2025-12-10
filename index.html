@@ -2,7 +2,10 @@
 <html>
 <head>
   <title>Vojtěch HENEMAN</title>
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="DUCK.png">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
 
@@ -22,47 +25,4 @@
       background: white;
       border: 2px solid rgba(0,0,0,0.2);
       padding: 6px 8px;
-      font-family: Helvetica;
-      font-weight: bold;
-      font-size: 24px;
-      z-index: 800;
-    }
-  </style>
-</head>
-<body>
-
-  <div id="map-title">Vojtěch HENEMAN</div>
-  <div id="map"></div>
-
-  <script>
-
-  /* Initialize map */
-  var map = L.map('map', {
-    center: [50.0768575, 16.9320419],
-    zoom: 12,
-    scrollWheelZoom: true
-  });
-
-  /* Inserted Stadia Stamen Watercolor basemap */
-  var Stadia_StamenWatercolor = L.tileLayer(
-    'https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.{ext}',
-    {
-      minZoom: 1,
-      maxZoom: 16,
-      attribution:
-        '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> ' +
-        '&copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> ' +
-        '&copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> ' +
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      ext: 'jpg'
-    }
-  ).addTo(map);
-
-  /* Marker */
-  L.marker([50.0768575, 16.9320419])
-    .addTo(map)
-    .bindPopup("Insert pop-up text here");
-
-  </script>
-</body>
-</html>
+      font-family: H
